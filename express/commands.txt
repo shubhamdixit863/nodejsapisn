@@ -2,3 +2,7 @@ mkdir -- creates directory for you
 
 cd (change directory) it helps you move to other directory
 ls (list) it lists all the files in your current directory
+
+npm init -y  // this will set up the project and create package.json
+
+npm i express -- express package

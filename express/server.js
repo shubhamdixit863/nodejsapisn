@@ -2,11 +2,27 @@ let   express=require("express");  // require statement is for loading the packa
 
 //console.log(express());
 
-let app=express();
+let app=express(); //calling express function
 const portNumber=8090; // 1000-65535
 
 app.get("/",function(req,res){
     res.send("Hello world my first route");
+
+})
+
+app.post("/post",function(req,res){
+
+  res.send("I am post route");
+
+})
+
+
+app.get("/home",function(req,res){
+
+  console.log(req.query); //get the data from url
+  console.log(req.headers);
+  console.log(req.body);
+  res.send("Home route");
 
 })
 
@@ -312,6 +328,8 @@ app.get("/html",function(req,res){
 
 
 // call back function
+
+//it is creating an application server
 
 app.listen(portNumber,function(){  // A callback function
     console.log("hello your server is running at port"+portNumber);
